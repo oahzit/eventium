@@ -27,11 +27,12 @@ body {
 }
 .navbar {
     margin-bottom: 0;
-    /*border-bottom: 2px solid #c3e4e9;*/
     border-radius: 0;
     color: #fff;
     width: 100%;
     background: none;
+}
+.main-navbar {
     border: none;
 }
 .navbar-inner {
@@ -59,6 +60,12 @@ body {
 .footer .navbar-inner li:last-child {
     float: right;
 }
+.footer {
+    border-top: 2px solid #c3e4e9;
+}
+.main-footer{
+    border: none;
+}
 .navbar .brand {
     color: #666666;
     text-shadow: none;
@@ -75,7 +82,12 @@ body {
     color: #333;
     background: #c3e4e9;
 }
-
+.main-navbar .nav > li > a:hover,
+.main-navbar .nav > li > a:active,
+.main-navbar .nav li.dropdown.open > .dropdown-toggle {
+    color: #333;
+    background: none;
+}
 .navbar .nav li.dropdown > .dropdown-toggle .caret,
 .nav .dropdown .caret {
     border-top-color: #666666;
@@ -88,11 +100,6 @@ body {
 .nav .dropdown .caret {
     border-top-color: #333;
     border-bottom-color: #333;
-}
-
-.post-footer-padding {
-    background: #fdfdfd;
-    height: 100%;
 }
 
 .title-wrapper {
@@ -544,7 +551,7 @@ body {
 }
 .main-page {
     background: url('blur01.jpg') no-repeat;
-    background-size: 100%;
+    /*background-position: center;*/
     display: block;
     position: fixed;
     width: 100%;
@@ -552,6 +559,8 @@ body {
     top: 0px;
     left: 0px;
     z-index: 0;
+    min-height: 815px;
+    min-height: 970px;
 }
 .navbar {
     z-index: 1;
@@ -559,8 +568,27 @@ body {
 #iron-router-progress {
     z-index: 2;
 }
-
-.container {
-    border-top: 2px solid #c3e4e9;
-    border-bottom: 2px solid #c3e4e9;
+.sample-img {
+    position: relative;
+    display: block;
+    float: right;
+    width: 500px;
+    height: 500px;
+    margin-top: 120px;
+}
+.sample {
+    height: 500px;
+    width: 510px;
+}
+.main-text {
+    float: left;
+    position: relative;
+    display: block;
+    z-index: 4;
+    margin-top: 180px;
+    width: 380px;
+    font-size: 16px;
+}
+.main-text h2 {
+    padding-left: 0;
 }
