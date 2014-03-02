@@ -1,0 +1,35 @@
+<template name="eventEdit">
+    <form role="form">
+    <div>
+        <h4>
+            New Event 
+            <button type="button" class="close" aria-hidden="true" href="#">&times;</button>
+        </h4>
+        <hr/>
+    </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" value="{{title}}" placeholder="Name your event">
+      </div>
+      <div class="form-group">
+        <label for="dates">Date and Time</label>
+        <div class="input-group" id="datepicker">
+            <input type="text" class="form-control" name="date" id="date" value="{{date}}" placeholder="mm/dd/yyyy">
+            <span class="input-group-addon">at</span>
+            <input type="text" class="form-control" name="time" id="time" value="{{time}}"placeholder="hh:mm AM/PM">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input class="form-control" name="location" type="text" value="{{location}}" placeholder="Where will it be?"/>
+        </div>
+      <div class="form-group">
+        <label class="control-label" for="description">Details</label>
+        <textarea class="form-control" rows="3" name="description" placeholder="Add more info (optional, but awesome!)">{{description}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Save Event</button>
+      <a class="js-cancel btn-link" href="#">Cancel</a>
+      <hr/>
+      <a class="btn btn-danger js-delete" href="#">Delete Event</a>
+    </form>
+</template>

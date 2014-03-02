@@ -1,0 +1,32 @@
+<template name="notifications">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Notifications
+    {{#if notificationCount}}
+      <span class="badge">{{notificationCount}}</span>
+    {{/if}}
+    <b class="caret"></b>
+  </a>
+  <ul class="notification dropdown-menu">
+    {{#if notificationCount}}
+      {{#each notifications}}
+        {{> notification}}
+      {{/each}}
+      <li>
+        <a href="#" class='js-clearNew'> Clear {{pluralize notificationCount "new notification"}}
+      </li>
+    {{else}}
+      <li><span>No Notifications</span></li>
+    {{/if}}
+  </ul>
+</template>
+
+<template name="notification">
+  <li>
+    <a href="{{notificationEventPath}}" class='js-notification'>
+      <strong>{{attendeeName}}</strong> signed-up for {{eventName}}
+      {{#if attendeeMessage}}
+         and left a message
+      {{/if}}
+    </a>
+  </li>
+</template>

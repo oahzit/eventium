@@ -1,0 +1,31 @@
+<template name="occasionsList">
+  <div class="wrapper">
+    {{#if currentUser}}
+    <div class="occasionList-title clearfix">
+        <h2 class="pull-left"> Your Eventium </h2>
+        <a href="#" class="pull-right btn attend btn-primary js-createoccasion">New Eventium</a>
+    </div>
+    <div class="occasions">
+      {{#each occasions}}
+    		{{> occasion}}
+      {{/each}}
+    </div>
+    {{else}}
+      {{> carouselPage}}
+    {{/if}}
+  
+    {{#if createOccasion}}
+    	<div class="overlay"></div>
+    	<div class="popup event-edit">
+      	{{> occasionCreate}}
+    	</div>
+  	{{/if}}
+
+    {{#if editOccasion}}
+      <div class="overlay"></div>
+      <div class="popup event-edit">
+        {{> occasionEdit}}
+      </div>
+    {{/if}}
+  </div>
+</template>

@@ -1,0 +1,13 @@
+<template name="messagePage">
+	<div class="main">
+		<h4>{{title}}</h4>
+		<ul>
+			{{#each attendees}}
+				{{#if attendeeMessage}}
+					{{attendeeName}} said: <br>
+					{{attendeeMessage}}
+				{{/if}}
+			{{/each}}
+		</ul>
+	</div>
+</template>

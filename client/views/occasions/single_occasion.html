@@ -1,0 +1,19 @@
+<template name="singleOccasion">
+  <div class="single-occasion-image">
+    <img src="/puppy.jpg" alt="puppy" />
+  </div>
+    <div class="occasion-content">
+      <h4> {{title}}</h4>
+      <p> {{description}} </p>
+      <p> {{startDate}} to {{endDate}} </p>
+        {{#if ownOccasion}}
+          <a href="#" class="js-edit">Edit</a>
+    	  {{/if}}
+      </p>
+    </div>
+    <!--
+    <div class="addEvent">
+      <a href="#" class=" btn attend btn-primary js-create">Add Event</a>
+    </div>
+    -->
+</template>

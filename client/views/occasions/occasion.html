@@ -1,0 +1,13 @@
+<template name="occasion">
+  <div class="occasion">
+  	<div class="occasion-image">
+  		<img src="/puppy.jpg" alt="puppy" />
+  	</div>
+    <div class="occasion-content">
+      <h3><a href="{{pathFor 'occasionPage'}}">{{title}}</a></h3>
+        <p> Start Date: {{startDate}}</p>
+        <p> End Date: {{endDate}} </p>
+        <a href="#" class="js-editOccasion">Edit/Delete</a>
+    </div>
+  </div>
+</template>

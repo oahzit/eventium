@@ -1,0 +1,11 @@
+{
+  "packages": {
+    "iron-router": {},
+    "bootstrap-3": {},
+    "spin": {},
+    "iron-router-progress": {},
+    "accounts-ui-bootstrap-3": {},
+    "bootstrap-3-timepicker": {},
+    "bootstrap-datepicker2": {}
+  }
+}

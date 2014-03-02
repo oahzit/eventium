@@ -1,0 +1,73 @@
+<template name="occasionPage">
+  <div class="wrapper clearfix">
+    <div class="title-wrapper clearfix">
+      <h2 class="pull-left">{{title}}</h2>
+      {{#if ownOccasion}}
+        <a href="#" class="pull-right btn attend btn-primary js-create">Add Event</a>
+      {{/if}}
+    </div>
+    
+    <div class="occasion-page-wrapper clearfix">
+      <table>
+        <td class="content">
+          <div class="pull-left">
+            <ul class="events">
+              {{#each events}}
+                {{> event}}
+              {{/each}}
+            </ul>
+          </div>
+        </td>
+        <td class="sidebar">
+          <div class="pull-right occasion-sidebar">
+            {{> singleOccasion}}
+          </div>
+        <td>
+        </div>
+  </div>
+
+    {{#if activeEventId}}
+    <div class="overlay"></div>
+        {{#if confirm}} 
+          <div class="popup">
+            {{> confirmationPage}}
+          </div>
+        {{else}}
+          {{#if editEvent}}
+            <div class="popup event-edit">
+              {{> eventEdit}}
+            </div>
+          {{else}}
+            {{#if viewAttendees}}
+              <div class="popup event-edit attendees">
+                {{> attendeePage}}
+              </div>
+            {{else}}
+              <div class="popup">
+                {{> eventJoin}}
+              </div>
+            {{/if}}
+          {{/if}}
+        {{/if}}
+    {{/if}}
+
+    {{#if editOccasion}}
+      <div class="overlay"></div>
+      <div class="popup event-edit">
+        {{> occasionEdit}}
+      </div>
+    {{/if}}
+
+    {{#if createOccasion}}
+      <div class="overlay"></div>
+      <div class="popup event-edit">
+        {{> occasionCreate}}
+      </div>
+    {{/if}}
+    {{#if createEvent}}
+      <div class="overlay"></div>
+      <div class="popup event-edit">
+        {{> eventCreate}}
+      </div>
+    {{/if}}
+</template>

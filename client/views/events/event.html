@@ -1,0 +1,38 @@
+<template name="event">
+	<div class="event">
+	    <div class="event-content">
+	    	<div class="date pull-left">
+				<strong>{{dateReformat date}}</strong>
+				<p class="time">{{time}}</p>
+			</div>
+			<div class="event-image pull-left">
+				<img src="/puppy_square.jpg" alt="puppy"/>
+			</div>
+			<div class="eventDetails pull-left">
+				<h3>{{title}}</h3>
+				<p class="eventDescription">{{description}}</p>
+				<p> {{location}} </p>
+				{{#if ownEvent}}<a class='js-edit' href="{{pathFor 'eventEdit'}}">Edit/Delete</a>{{/if}}
+			</div>
+			<div class ="pull-right">
+			    {{#if alreadyJoined}}
+			    	<a href="#" class="btn btn-default pull-right js-unjoin">Unattend</a>
+			    {{else}}
+		    	    <a href="#" class="btn btn-default pull-right js-join">Attend</a>
+			    {{/if}}
+
+			    {{#if ownEvent}}
+			    	<br>
+			    	<a class="pull-right js-attendees" href="#">
+			    		View attendees
+			    	</a>
+			    {{else}}
+				    <li class="attendeeDropdown">
+						{{> attendees}}
+		    		</li>
+			    {{/if}}
+
+			</div>
+	    </div>
+  </div>
+</template>

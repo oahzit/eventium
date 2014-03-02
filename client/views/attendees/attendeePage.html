@@ -1,0 +1,40 @@
+<template name="attendeePage">
+  <div>
+    <h4>
+    	Attendees for {{title}}
+    	{{#if activeEventId}}
+    		<button type="button" class="close" aria-hidden="true" href="#">&times;</button>
+    	{{/if}}
+	</h4>
+    <hr>
+		{{#each attendees}}
+		<div class="messageHeader">
+			<strong>Name:</strong>
+		</div>
+		<div class="messageContent">
+			{{attendeeName}}
+		</div>
+		<div class="messageHeader">
+			<strong>Email:</strong>
+		</div>
+		<div class="messageContent">
+			{{attendeeEmail}}
+		</div>
+			<br>
+			{{#if attendeeMessage}}
+				<div class="messageHeader">
+					<strong>Message:</strong>
+				</div>
+				<div class="messageContent">
+					{{attendeeMessage}}
+				</div>
+				<br>
+			{{/if}}
+			<br>
+			<hr>
+		{{/each}}
+	{{#if activeEventId}}
+		<a class="btn btn-default js-cancel" href="#">Close</a>
+	{{/if}}
+  </div>
+</template>

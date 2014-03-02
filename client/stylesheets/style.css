@@ -1,0 +1,566 @@
+.grid-block, .main, .occasions li, .events-form {
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+h4 {
+    margin: 5px 0;
+}
+hr {
+    margin: 12px 0;
+}
+#iron-router-progress {
+    background-color: #1d93dd;
+    box-shadow: 0 0 5px rgba(29, 147, 221, 0.5);
+}
+#iron-router-progress.spinner:before{
+    border: 3px solid #1d93dd;
+}
+body {
+    background: #f5f6f8;
+    /*background: #fdfdfd;*/
+    /*background-image: linear-gradient(to bottom, #FCF1D1, #A3C586);*/
+    color: #666666;
+    height: 100%;
+}
+.navbar {
+    margin-bottom: 0;
+    /*border-bottom: 2px solid #c3e4e9;*/
+    border-radius: 0;
+    color: #fff;
+    width: 100%;
+    background: none;
+    border: none;
+}
+.navbar-inner {
+    border-radius: 3px 3px 0px 0px;
+    /*background-image: linear-gradient(to bottom, #74AFAD, #558C89);*/
+    /*background-image: linear-gradient(to bottom, #1682b8, #1682b8);*/
+    /*background: -webkit-linear-gradient(top,#5db6e8 0,#168eda 85%,#168eda 90%,#1d93dd 100%)*/
+    /*background: linear-gradient(to bottom, #5db6e8, #0088cc) */
+    background: #f5f6f8;
+    border: 0;
+    padding-top: 5px;
+    vertical-align: baseline;
+    width: 970px;
+    padding-left: 25px;
+    padding-right: 5px;
+    margin: 0 auto;
+    box-shadow: none;
+}
+.footer .navbar-inner {
+    background: #f5f6f8;
+    border: 0;
+    height: 40px;
+    padding-top: 0;
+}
+.footer .navbar-inner li:last-child {
+    float: right;
+}
+.navbar .brand {
+    color: #666666;
+    text-shadow: none;
+    padding-left: 30px;
+}
+
+.navbar .nav > li > a {
+    color: #666666;
+    text-shadow: none;
+}
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:active,
+.navbar .nav li.dropdown.open > .dropdown-toggle {
+    color: #333;
+    background: #c3e4e9;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret,
+.nav .dropdown .caret {
+    border-top-color: #666666;
+    border-bottom-color: #666666;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret,
+.nav .dropdown .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+
+.post-footer-padding {
+    background: #fdfdfd;
+    height: 100%;
+}
+
+.title-wrapper {
+    margin-top: 10px;
+    background: #fff;
+    padding-top: 1px;
+    border-bottom: 2px solid #c3e4e9;
+}
+
+#spinner { height: 300px }
+
+.info {
+    width: 50px;
+}
+.info-header {
+    font-weight: bold;
+}
+.info td {
+    vertical-align: top;
+}
+.main {
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper {
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f5f6f8;
+    padding: 10px;
+    border-radius: 0px 0px 3px 3px;
+    /*box-shadow: 0 0 2px rgba(0,0,0,0.3),0 3px 5px rgba(0,0,0,0.2)*/
+    z-index: 998;
+    min-height: 680px;
+}
+.wrapper h2 {
+    color: #666;
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.wrapper hr {
+    height: 1px;
+    background: #E2E2E2;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    border: 0 none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.occasionPage {
+    max-width: 900px;
+    min-width: 695px;
+    margin: auto;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.occasion {
+    *zoom: 1;
+    -webkit-transition: all 300ms 0ms;
+    -webkit-transition-delay: ease-in;
+    -moz-transition: all 300ms 0ms ease-in;
+    -o-transition: all 300ms 0ms ease-in;
+    transition: all 300ms 0ms ease-in;
+    position: relative;
+    opacity: 1;
+    background: #fff;
+    
+    margin-bottom: 20px;
+    border-bottom: 5px solid #ccc;
+
+    /*
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    */
+}
+.occasion:before, .occasion:after {
+    content: "";
+    display: table;
+}
+.occasion:after { clear: both }
+.occasion.invisible { opacity: 0 }
+.occasion .upvote {
+    display: block;
+    margin: 7px 12px 0 0;
+    float: left;
+}
+.occasion .occasion-content { 
+    float: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.occasion .occasion-content h3 {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 18px;
+}
+.occasion .occasion-content h3 a {
+    display: inline-block;
+    margin-right: 5px;
+}
+.occasion .occasion-content h3 span {
+    font-weight: normal;
+    font-size: 14px;
+    display: inline-block;
+    color: #aaaaaa;
+}
+.occasion-content h4 {
+    padding-bottom: 10px
+}
+.occasion .occasion-content p { margin: 0 }
+
+.occasion-image {
+    float: left;
+}
+.occasion-image img {
+    height: 110px;
+    width: 155px;
+}
+.event-image img {
+    height: 110px;
+    width: 110px;
+}
+
+.single-occasion-image img {
+    width: 255px;
+    height: 182px;
+}
+
+.occasion-page-wrapper {
+    border-bottom: 5px solid #ccc;
+    background: #fff;
+}
+
+.events {
+    background: #fff;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    width: 695px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.events li h4 {
+    font-size: 16px;
+    margin: 0;
+}
+.events li h4 .date {
+    font-size: 12px;
+    font-weight: normal;
+}
+.events li h4 a { font-size: 12px }
+.events li p:last-child { margin-bottom: 0 }
+
+.event {
+    *zoom: 1;
+    -webkit-transition: all 300ms 0ms;
+    -webkit-transition-delay: ease-in;
+    -moz-transition: all 300ms 0ms ease-in;
+    -o-transition: all 300ms 0ms ease-in;
+    transition: all 300ms 0ms ease-in;
+    position: relative;
+    opacity: 1;
+    background: #fff;
+    border-bottom: #ededed solid 1px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); */
+}
+.event:before, .event:after {
+    content: "";
+    display: table;
+}
+.event:after { clear: both }
+.event.invisible { opacity: 0 }
+.event .upvote {
+    display: block;
+    margin: 7px 12px 0 0;
+    float: left;
+}
+.event .date{
+    width: 10%;
+    min-width: 65px;
+    margin-right: 5px;
+}
+.event .eventDetails {
+    font-size: 13px;
+    margin-left: 10px;
+}
+.event .event-content { 
+    float: left;
+    width: 100%;
+}
+.event .event-content h3 {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 18px;
+}
+.event .event-content h3 a {
+    display: inline-block;
+    margin-right: 5px;
+}
+.event .event-content h3 span {
+    font-weight: normal;
+    font-size: 14px;
+    display: inline-block;
+    color: #aaaaaa;
+}
+.event .event-content p { margin: 0 }
+
+.occasions {
+    list-style-type: none;
+    margin: auto;
+    width: 930px;
+}
+.occasions li h4 {
+    font-size: 16px;
+    margin: 0;
+}
+.occasions li h4 .date {
+    font-size: 12px;
+    font-weight: normal;
+}
+.occasions li h4 a { font-size: 12px }
+.occasions li p:last-child { margin-bottom: 0 }
+.occasion .addEvent {
+    display: block;
+    float: right;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+
+.attendeeDropdown { 
+    position: relative;
+    margin-top: 41px;
+}
+
+.dropdown-menu span {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    line-height: 20px;
+    color: #bbb;
+    white-space: nowrap;
+}
+.load-more {
+    display: block;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+.load-more:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
+}
+.overlay {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 998;
+}
+
+.popup {
+    position: fixed;
+    min-width: 250px;
+    top: 20%;
+    left: 40%;
+    z-index: 999;
+    /*box-shadow: 0 0px 0px 5px rgba(0, 0, 0, 0.2);
+    /*border-radius: 3px;*/
+    background: #fff;
+    padding: 15px;
+}
+.popup hr{
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+.event-edit {
+    width: 400px;
+    padding: 15px;
+    overflow: auto;
+    background: #fff;
+}
+.event-edit hr {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+.popup-form {
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0px 0px 7px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    /*box-shadow: 0 2px 15px 7px rgba(0, 0, 0, 0.2);*/
+}
+
+.event-edit .control-group, .event-edit .control-label .event-edit input{
+    margin-bottom: 5px;
+}
+
+.title {
+    width: 95%;
+}
+
+.date {
+    width: 44%;
+    margin-right: 2.5%;
+}
+
+.time {
+    width: 44%;
+}
+
+.description {
+    width: 95%;
+}
+
+.start-date {
+    width: 42%;
+    margin-bottom: 0px;
+}
+
+.end-date {
+    width: 42%;
+    margin-bottom: 0px;
+}
+.input-group-addon {
+    background: #eeeeee;
+    border: solid 1px #cccccc;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: -5px;
+    margin-right: -5px
+}
+
+.popup-parent {
+    width: 400px;
+}
+
+.messageHeader {
+    width: 10%;
+    float: left;
+}
+
+.messageContent {
+    width: 89%;
+    float: left;
+}
+
+.popup .messageHeader {
+    width: 75px;
+}
+
+.popup .messageContent {
+    width: 295px;
+}
+
+.popup .main {
+    margin-bottom: 0px;
+}
+
+.header-div {
+    background-image: linear-gradient(to bottom, #74AFAD, #558C89);
+    width: 100%;
+}
+
+.events-content{
+    float: left;
+}
+
+.occasion-sidebar{
+    opacity: 1;
+    width: 255px;
+    height: 100%;
+}
+
+.occasion-sidebar .occasion-content {
+    padding: 10px;
+}
+
+.title-wrapper a {
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+}
+
+.date .time {
+    font-size: 12px;
+    width: auto;
+}
+.sidebar {
+    background: #ebf4fa;
+    vertical-align: top; 
+    padding: 0;
+}
+.content {
+    vertical-align: top;
+    padding: 0;
+}
+
+.occasionList-title a {
+    position: relative;
+    top: 15px;
+}
+.occasionList-title h2 {
+    padding-left: 0
+}
+
+.occasionList-title {
+    border-bottom: 1px solid #E2E2E2;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-container {
+    width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.attendees {
+    overflow: auto;
+    max-height: 400px;
+}
+.main-page {
+    background: url('blur01.jpg') no-repeat;
+    background-size: 100%;
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.navbar {
+    z-index: 1;
+}
+#iron-router-progress {
+    z-index: 2;
+}
+
+.container {
+    border-top: 2px solid #c3e4e9;
+    border-bottom: 2px solid #c3e4e9;
+}

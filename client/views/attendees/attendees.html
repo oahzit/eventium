@@ -1,0 +1,21 @@
+<template name="attendees">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Who's going?
+    <!-- <b class="caret"></b> -->
+  </a>
+  <ul class="notification dropdown-menu">
+    {{#if attendeeCount}}
+      {{#each attendees}}
+        {{> attendee}}
+      {{/each}}
+    {{else}}
+    <li><span>No one yet. Be the first!</span></li>
+    {{/if}}
+  </ul>
+</template>
+
+<template name="attendee">
+  <li>
+      {{attendeeName}}
+  </li>
+</template>

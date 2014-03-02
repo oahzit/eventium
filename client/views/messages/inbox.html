@@ -1,0 +1,29 @@
+<template name="inbox">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Inbox
+    {{#if messageCount}}
+      <span class="badge badge-inverse">{{messageCount}}</span>
+    {{/if}}
+    <b class="caret"></b>
+  </a>
+  <ul class="notification dropdown-menu">
+    {{#if messageCount}}
+      {{#each messages}}
+        {{> message}}
+      {{/each}}
+      <li>
+        <a href="#" class='js-clearNew'> Clear {{messageCount}} new messages
+      </li>
+    {{else}}
+      <li><span>No messages</span></li>
+    {{/if}}
+  </ul>
+</template>
+
+<template name="message">
+  <li>
+    <a href="{{messageEventPath}}" class='js-message'>
+      New message from: <strong>{{attendeeName}}</strong>
+    </a>
+  </li>
+</template>
