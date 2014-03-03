@@ -8,7 +8,8 @@
       "iron-router-progress": {},
       "accounts-ui-bootstrap-3": {},
       "bootstrap-3-timepicker": {},
-      "bootstrap-datepicker2": {}
+      "bootstrap-datepicker2": {},
+      "cookies": {}
     },
     "packages": {
       "iron-router": {
@@ -45,6 +46,11 @@
         "git": "https://github.com/deepwell/meteor-bootstrap-datepicker.git",
         "tag": "v1.2.0",
         "commit": "b7de18a7cc651ea665cda75048663f90d1a11d10"
+      },
+      "cookies": {
+        "git": "https://github.com/subhog/meteor-cookies.git",
+        "tag": "v0.3.0",
+        "commit": "c3d2684cd97dd611652833169b5f628ad23c57f6"
       }
     }
   }

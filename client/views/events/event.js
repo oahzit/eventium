@@ -20,9 +20,14 @@ Template.event.helpers({
 Template.event.events({
 	'click .js-join': function(e) {
 		e.preventDefault();
-
 		var eventId = this._id;
 		Session.set('activeEventId', eventId);
+	},
+	'click .js-unjoin': function(e) {
+		e.preventDefault();
+		var eventId = this._id;
+		Session.set('activeEventId', eventId);
+		Session.set('unjoin', 'true')		
 	},
 	'click .js-edit': function(e) {
 		e.preventDefault();

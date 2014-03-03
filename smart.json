@@ -6,6 +6,7 @@
     "iron-router-progress": {},
     "accounts-ui-bootstrap-3": {},
     "bootstrap-3-timepicker": {},
-    "bootstrap-datepicker2": {}
+    "bootstrap-datepicker2": {},
+    "cookies": {}
   }
 }

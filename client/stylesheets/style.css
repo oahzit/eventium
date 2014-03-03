@@ -572,13 +572,14 @@ body {
     position: relative;
     display: block;
     float: right;
-    width: 500px;
-    height: 500px;
-    margin-top: 120px;
+    width: 600px;
+    height: 400px;
+    margin-top: 150px;
+    margin-right: -30px;
 }
 .sample {
-    height: 500px;
-    width: 510px;
+    height: 400px;
+    width: 600px;
 }
 .main-text {
     float: left;
@@ -591,4 +592,10 @@ body {
 }
 .main-text h2 {
     padding-left: 0;
+}
+.attendee-dropdown {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }

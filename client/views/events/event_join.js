@@ -29,6 +29,7 @@ Template.eventJoin.events({
 				joinedEvents[eventId] = id;
 
 				Session.set('joinedEvents', joinedEvents)
+				console.log(joinedEvents)
 				
 				var attendeeEmail = newAttendee['email'];
 				Meteor.call('sendEmail',

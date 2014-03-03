@@ -43,12 +43,18 @@
                 {{> attendeePage}}
               </div>
             {{else}}
-              <div class="popup">
-                {{> eventJoin}}
-              </div>
+              {{#if unjoin}}
+                <div class="popup">
+                  {{> unattendEvent}}
+                </div>
+                {{else}}
+                  <div class="popup">
+                    {{> eventJoin}}
+                  </div>
             {{/if}}
           {{/if}}
         {{/if}}
+      {{/if}}
     {{/if}}
 
     {{#if editOccasion}}

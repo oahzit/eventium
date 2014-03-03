@@ -25,6 +25,9 @@ Template.occasionPage.helpers({
   },
   createEvent: function() {
   	return Session.get('create');
+  },
+  unjoin: function() {
+    return Session.get('unjoin');
   }
 });
 
