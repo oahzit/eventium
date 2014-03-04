@@ -21,15 +21,14 @@ Template.eventJoin.events({
 				throwError(error.reason);
 			else {
 				Session.set('confirm', 'confirm')
-				var joinedEvents = Session.get('joinedEvents');
+				var joinedEvents = JSON.parse(ReactiveCookie.get('joinedEvents'));
 				
 				if (joinedEvents == null)
 					joinedEvents = {};
 
 				joinedEvents[eventId] = id;
 
-				Session.set('joinedEvents', joinedEvents)
-				console.log(joinedEvents)
+				ReactiveCookie.set('joinedEvents', JSON.stringify(joinedEvents));
 				
 				var attendeeEmail = newAttendee['email'];
 				Meteor.call('sendEmail',

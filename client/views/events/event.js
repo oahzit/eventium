@@ -3,7 +3,8 @@ Template.event.helpers({
 		return this.userId == Meteor.userId();
 	},
 	alreadyJoined: function() {
-		var joinedEvents = Session.get('joinedEvents')
+		
+		var joinedEvents = JSON.parse(ReactiveCookie.get('joinedEvents'));
 		var eventId = this._id;
 
 		if (joinedEvents != null) {

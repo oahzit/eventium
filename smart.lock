@@ -9,7 +9,7 @@
       "accounts-ui-bootstrap-3": {},
       "bootstrap-3-timepicker": {},
       "bootstrap-datepicker2": {},
-      "cookies": {}
+      "reactive-cookie": {}
     },
     "packages": {
       "iron-router": {
@@ -47,10 +47,10 @@
         "tag": "v1.2.0",
         "commit": "b7de18a7cc651ea665cda75048663f90d1a11d10"
       },
-      "cookies": {
-        "git": "https://github.com/subhog/meteor-cookies.git",
-        "tag": "v0.3.0",
-        "commit": "c3d2684cd97dd611652833169b5f628ad23c57f6"
+      "reactive-cookie": {
+        "git": "https://github.com/EtherPOS/reactive-cookie.git",
+        "tag": "v0.0.4",
+        "commit": "4ae7c42a374a7d2889eefb68df69f4e62b5986a2"
       }
     }
   }

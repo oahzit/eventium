@@ -1,12 +1,12 @@
 Template.unattendEvent.events({
   'click .js-unattend': function() {
-    var joinedEvents = Session.get('joinedEvents');
+    var joinedEvents = JSON.parse(ReactiveCookie.get('joinedEvents'));
     var eventId = Session.get('activeEventId');
     var attendeeId = joinedEvents[eventId];
     Attendees.remove({_id: attendeeId});
     delete joinedEvents[eventId];
    
-    Session.set('joinedEvents', joinedEvents)
+    ReactiveCookie.set('joinedEvents', JSON.stringify(joinedEvents));
    	Session.set('activeEventId', '');
   	Session.set('unjoin', '');
   },
