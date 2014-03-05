@@ -601,3 +601,36 @@ body {
     padding-top: 3px;
     padding-bottom: 3px;
 }
+.sans-occasions {
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.sans-occasions h2 {
+    padding-left: 0px;
+    color: #aaa;
+}
+.sans-occasions p {
+    font-size: 16px;
+    padding-left: 6px;
+    color: #aaa;
+}
+.sans-occasions a {
+    margin-left: 5px;
+}
+.sans-events {
+    margin-top: 100px;
+    padding-left: 160px;
+}
+.sans-events h2 {
+    padding-left: 0px;
+    color: #aaa;
+}
+.sans-events p {
+    font-size: 16px;
+    padding-left: 45px;
+    color: #aaa;
+}
+.sans-events a {
+    margin-left: 3px;
+}

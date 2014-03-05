@@ -5,11 +5,20 @@
         <h2 class="pull-left"> Your Eventium </h2>
         <a href="#" class="pull-right btn attend btn-primary js-createoccasion">New Eventium</a>
     </div>
-    <div class="occasions">
-      {{#each occasions}}
-    		{{> occasion}}
-      {{/each}}
-    </div>
+
+    {{#if occasionCount}}
+      <div class="occasions">
+        {{#each occasions}}
+      		{{> occasion}}
+        {{/each}}
+      </div>
+      {{else}}
+        <div class="sans-occasions">
+          <h2> There's nothing here yet</h2>
+          <p> Get started and
+          <a href="#" class="btn attend btn-primary js-createoccasion">Create a New Eventium</a></p>
+        </div>
+      {{/if}}
     {{else}}
       {{> carouselPage}}
     {{/if}}

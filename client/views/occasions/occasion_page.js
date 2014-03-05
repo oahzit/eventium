@@ -28,6 +28,9 @@ Template.occasionPage.helpers({
   },
   unjoin: function() {
     return Session.get('unjoin');
+  },
+  eventCount: function() {
+    return Events.find({occasionId: this._id}).count();
   }
 });
 

@@ -7,6 +7,9 @@ Template.occasionsList.helpers({
   },
   editOccasion: function() {
   	return Session.get('editOccasion')
+  },
+  occasionCount: function() {
+    return Occasions.find().count();
   }
 });
 

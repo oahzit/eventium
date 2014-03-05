@@ -11,11 +11,23 @@
       <table>
         <td class="content">
           <div class="pull-left">
+          {{#if eventCount}}
             <ul class="events">
               {{#each events}}
                 {{> event}}
               {{/each}}
             </ul>
+          {{else}}
+            <div class="events sans-events">
+              <h2> There's nothing here yet</h2>
+              {{#if ownOccasion}}
+                <p> Get started and
+                <a href="#" class="btn attend btn-primary js-create">Add an Event</a></p>
+              {{else}}
+                <p> Please check back again later </p>
+              {{/if}}
+          </div>
+          {{/if}}
           </div>
         </td>
         <td class="sidebar">
