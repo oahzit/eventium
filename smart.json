@@ -5,8 +5,7 @@
     "spin": {},
     "iron-router-progress": {},
     "accounts-ui-bootstrap-3": {},
-    "bootstrap-3-timepicker": {},
-    "bootstrap-datepicker2": {},
-    "reactive-cookie": {}
+    "reactive-cookie": {},
+    "bootstrap-datepicker2": {}
   }
 }

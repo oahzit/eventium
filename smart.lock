@@ -7,9 +7,8 @@
       "spin": {},
       "iron-router-progress": {},
       "accounts-ui-bootstrap-3": {},
-      "bootstrap-3-timepicker": {},
-      "bootstrap-datepicker2": {},
-      "reactive-cookie": {}
+      "reactive-cookie": {},
+      "bootstrap-datepicker2": {}
     },
     "packages": {
       "iron-router": {
@@ -19,8 +18,8 @@
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
-        "tag": "v3.1.0-1",
-        "commit": "329dccb08bfc18c635676dea600ac9953162cda9"
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
@@ -37,20 +36,15 @@
         "tag": "v0.2.5",
         "commit": "91cd37a1320213dd209c3a668bf542eeb9c39a00"
       },
-      "bootstrap-3-timepicker": {
-        "git": "https://github.com/ianserlin/meteor-bootstrap-timepicker.git",
-        "tag": "v0.2.5",
-        "commit": "12dd7c5dd0e67f0f307e7c5aefed74777be808f1"
+      "reactive-cookie": {
+        "git": "https://github.com/EtherPOS/reactive-cookie.git",
+        "tag": "v0.0.4",
+        "commit": "4ae7c42a374a7d2889eefb68df69f4e62b5986a2"
       },
       "bootstrap-datepicker2": {
         "git": "https://github.com/deepwell/meteor-bootstrap-datepicker.git",
         "tag": "v1.2.0",
         "commit": "b7de18a7cc651ea665cda75048663f90d1a11d10"
-      },
-      "reactive-cookie": {
-        "git": "https://github.com/EtherPOS/reactive-cookie.git",
-        "tag": "v0.0.4",
-        "commit": "4ae7c42a374a7d2889eefb68df69f4e62b5986a2"
       }
     }
   }

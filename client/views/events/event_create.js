@@ -39,8 +39,6 @@ Template.eventCreate.rendered = function(template) {
     startView: startDate
   });
   $('#time').timepicker({
-    minuteStep: 30,
-    defaultTime: '07:00 PM',
-    template: 'dropdown'
+    'scrollDefaultNow': true
   });
 }
