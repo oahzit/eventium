@@ -233,7 +233,7 @@ body {
 
 .single-occasion-image img {
     width: 255px;
-    height: 182px;
+    height: auto;
 }
 
 .occasion-page-wrapper {

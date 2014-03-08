@@ -23,7 +23,7 @@ Meteor.methods({
 		if (!occasionAttributes.title)
 			throw new Meteor.Error(422, 'Please give your occasion a title')
 
-		var occasion = _.extend(_.pick(occasionAttributes, 'title', 'description', 'startDate', 'endDate'), {
+		var occasion = _.extend(_.pick(occasionAttributes, 'title', 'description', 'startDate', 'endDate', 'photoURL', 'photoFile'), {
 			userId: user._id,
 			unixDate: new Date(occasionAttributes.startDate)
 		})

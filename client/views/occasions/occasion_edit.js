@@ -30,6 +30,14 @@ Template.occasionEdit.helpers({
     }
     var activeOccasion = Occasions.findOne(currentOccasionId);
     return activeOccasion.description;
+  },
+  filename: function() {
+    var currentOccasionId = this._id;
+    if (currentOccasionId == null) {
+      currentOccasionId = Session.get('activeOccasion')
+    }
+    var activeOccasion = Occasions.findOne(currentOccasionId);
+    return activeOccasion.photoFile
   }
 });
 

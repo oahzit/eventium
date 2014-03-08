@@ -6,6 +6,7 @@
     "iron-router-progress": {},
     "accounts-ui-bootstrap-3": {},
     "reactive-cookie": {},
-    "bootstrap-datepicker2": {}
+    "bootstrap-datepicker2": {},
+    "filepicker": {}
   }
 }
