@@ -153,6 +153,9 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
+.no-margin {
+    margin: 0;
+}
 .occasionPage {
     max-width: 900px;
     min-width: 695px;
@@ -221,14 +224,19 @@ body {
 
 .occasion-image {
     float: left;
+    width: 155px;
+    height: 110px;
+    overflow: hidden;
 }
 .occasion-image img {
-    height: 110px;
-    width: 155px;
+    height: auto;
+    width: 200px;
 }
 .event-image img {
-    height: 110px;
     width: 110px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .single-occasion-image img {
@@ -381,8 +389,8 @@ body {
 .popup {
     position: fixed;
     min-width: 250px;
-    top: 20%;
-    left: 40%;
+    top: 10%;
+    left: 35%;
     z-index: 999;
     /*box-shadow: 0 0px 0px 5px rgba(0, 0, 0, 0.2);
     /*border-radius: 3px;*/
@@ -600,6 +608,12 @@ body {
     padding-right: 20px;
     padding-top: 3px;
     padding-bottom: 3px;
+}
+.attendee-page h4{
+    padding-left: 10px;
+}
+.attendee-list {
+    padding-left: 10px;
 }
 .sans-occasions {
     width: 35%;

@@ -36,5 +36,11 @@ Template.attendeePage.events({
 	'click .js-cancel': function(e) {
 		Session.set('activeEventId', '')
 		Session.set('viewAttendees', '')
+	},
+	'click .js-back': function(e) {
+		e.preventDefault();
+		var event = Events.findOne(this._id);
+		var occasionId = event.occasionId;
+		Router.go('occasionPage', {_id: occasionId});
 	}
 })

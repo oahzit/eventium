@@ -22,8 +22,14 @@
       </div>
       <div class="form-group">
         <label for="photo">Eventium Photo</label>
-        <input class="form-control" id="photo" type="text" placeholder="{{filename}}" disabled>
-        <a class="link js-addPhoto" href="#">Change Photo</a>
+        <div class="input-group">
+          <input class="form-control" id="photo" type="text" placeholder="{{filename}}" disabled>
+          <span class="input-group-btn">
+            <button class="btn btn-default js-addPhoto" type="button">
+              <span class="glyphicon glyphicon-picture"></span>
+            </button>
+          </span>
+        </div>
       </div>
       <div class="form-group">
         <label for="description">Details</label>

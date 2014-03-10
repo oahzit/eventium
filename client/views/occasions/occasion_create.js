@@ -4,7 +4,7 @@ Template.occasionCreate.helpers({
     if (InkBlob) {
       return InkBlob.filename;
     }
-    return "Nothing yet..."
+    return "Our default placeholder..."
   }
 });
 
@@ -12,13 +12,21 @@ Template.occasionCreate.events({
   'submit form': function(e) {
     e.preventDefault();
     var InkBlob = Session.get('InkBlob');
+    if (InkBlob) {
+      var photoURL = InkBlob.url;
+      var photoFile = InkBlob.filename;
+    }
+    else {
+      var photoURL = '';
+      var photoFile = 'Our default placeholder...';
+    }
     var occasion = {
       title: $(e.target).find('[name=title]').val(),
       startDate: $(e.target).find('[name=start]').val(),
       endDate: $(e.target).find('[name=end]').val(),
       description: $(e.target).find('[name=description]').val(),
-      photoURL: InkBlob.url,
-      photoFile: InkBlob.filename
+      photoURL: photoURL,
+      photoFile: photoFile
     }
     
     Meteor.call('occasion', occasion, function(error, id) {
@@ -49,8 +57,7 @@ Template.occasionCreate.events({
     filepicker.pick({
     mimetypes: ['image/*'],
     container: 'modal',
-    services:['COMPUTER', 'URL', 'FACEBOOK', 'INSTAGRAM', 'PICASA'],
-    debug: true
+    services:['COMPUTER', 'URL', 'FACEBOOK', 'INSTAGRAM', 'PICASA']
     },
       function(InkBlob){
         console.log(JSON.stringify(InkBlob));

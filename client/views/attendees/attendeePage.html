@@ -1,13 +1,12 @@
 <template name="attendeePage">
+  {{#if activeEventId}}
   <div>
     <h4>
     	Attendees for {{title}}
-    	{{#if activeEventId}}
-    		<button type="button" class="close" aria-hidden="true" href="#">&times;</button>
-    	{{/if}}
+		<button type="button" class="close" aria-hidden="true" href="#">&times;</button>
 	</h4>
     <hr>
-		{{#each attendees}}
+	{{#each attendees}}
 		<div class="messageHeader">
 			<strong>Name:</strong>
 		</div>
@@ -20,6 +19,47 @@
 		<div class="messageContent">
 			{{attendeeEmail}}
 		</div>
+		<br>
+		{{#if attendeeMessage}}
+			<div class="messageHeader">
+				<strong>Message:</strong>
+			</div>
+			<div class="messageContent">
+				{{attendeeMessage}}
+			</div>
+			<br>
+		{{/if}}
+		<br>
+		<hr>
+	{{/each}}
+	<a class="btn btn-default js-cancel" href="#">Close</a>
+  </div>
+  {{else}}
+  	<div class="wrapper attendee-page">
+  	<div class="pull-right">
+	  	<a href="" class="link js-back">
+	  		<span class="glyphicon glyphicon-arrow-left"></span> Back to all events
+		</a>
+	</div>
+  	<br/>
+    <h4>
+    	Attendees for {{title}}
+	</h4>
+    <hr>
+	{{#each attendees}}
+		<div class="attendee-list">
+			<div class="messageHeader">
+				<strong>Name:</strong>
+			</div>
+			<div class="messageContent">
+				{{attendeeName}}
+			</div>
+			<div class="messageHeader">
+				<strong>Email:</strong>
+			</div>
+			<div class="messageContent">
+				{{attendeeEmail}}
+			</div>
 			<br>
 			{{#if attendeeMessage}}
 				<div class="messageHeader">
@@ -31,10 +71,9 @@
 				<br>
 			{{/if}}
 			<br>
-			<hr>
-		{{/each}}
-	{{#if activeEventId}}
-		<a class="btn btn-default js-cancel" href="#">Close</a>
-	{{/if}}
+		</div>
+		<hr>
+	{{/each}}
   </div>
+  {{/if}}
 </template>

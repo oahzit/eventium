@@ -15,7 +15,8 @@ Meteor.methods({
 			throw new Meteor.Error(422, "Events have to be created as part of an occasion")
 		var d = new Date(eventAttributes.date + ' ' + eventAttributes.time)
 		console.log(d)
-		var event = _.extend(_.pick(eventAttributes, 'title', 'date', 'time', 'description', 'location', 'occasionId'), {
+		var event = _.extend(_.pick(eventAttributes, 'title', 'date', 'time', 'description', 'location', 'occasionId',
+				'photoURL', 'photoFile'), {
 			userId: user._id,
 			unixDate: new Date(eventAttributes.date + ' ' + eventAttributes.time)
 		});

@@ -15,6 +15,18 @@ Template.event.helpers({
 	},
 	notificationEventPath: function() {
    		return Router.routes.attendeePage.path({_id: this._id});
+  	},
+  	photo: function() {
+  		var event = Events.findOne(this._id);
+  		var photoPath = event.photoURL;
+
+  		if (photoPath) {
+  			return photoPath;
+  		}
+
+  		var rand = Math.floor(Math.random()*3 + 1);
+  		photoPath = '/event_default' + rand + '.jpg';
+  		return photoPath;
   	}
 });
 

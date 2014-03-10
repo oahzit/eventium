@@ -37,7 +37,13 @@ Template.occasionEdit.helpers({
       currentOccasionId = Session.get('activeOccasion')
     }
     var activeOccasion = Occasions.findOne(currentOccasionId);
-    return activeOccasion.photoFile
+
+    if (Session.get('InkBlob')) {
+      var InkBlob = Session.get('InkBlob');
+      return InkBlob.filename;
+    }
+
+    return activeOccasion.photoFile;
   }
 });
 
@@ -49,6 +55,16 @@ Template.occasionEdit.events({
     if (currentOccasionId == null) {
       currentOccasionId = Session.get('activeOccasion')
     }
+    var activeOccasion = Occasions.findOne(currentOccasionId);
+
+    if (Session.get('InkBlob')) {
+      var photoFile = InkBlob.filename;
+      var photoURL = InkBlob.url;
+    }
+    else {
+      var photoURL = activeOccasion.photoURL;
+      var photoFile = activeOccasion.photoFile;
+    }
 
     var start = $(e.target).find('[name=start]').val();
     var unixDate = new Date(start);
@@ -57,7 +73,9 @@ Template.occasionEdit.events({
       startDate: $(e.target).find('[name=start]').val(),
       endDate: $(e.target).find('[name=end]').val(),
       description: $(e.target).find('[name=description]').val(),
-      unixDate: unixDate
+      unixDate: unixDate,
+      photoFile: photoFile,
+      photoURL: photoURL
     }
     
     Occasions.update(currentOccasionId, {$set: occasionProperties}, function(error) {
@@ -67,6 +85,7 @@ Template.occasionEdit.events({
       } else {
         Session.set('editOccasion', '');
         Session.set('activeOccasion', '');
+        Session.set('InkBlob', '');
       }
     });
   },
@@ -92,6 +111,24 @@ Template.occasionEdit.events({
   'click .close': function(e) {
     Session.set('editOccasion', '');
     Session.set('activeOccasion', '');
+  },
+  'click .js-addPhoto': function(e) {
+    e.preventDefault();
+    filepicker.setKey('A7F2pfPuBSEKNV5MFKg37z');
+    filepicker.pick({
+    mimetypes: ['image/*'],
+    container: 'modal',
+    services:['COMPUTER', 'URL', 'FACEBOOK', 'INSTAGRAM', 'PICASA']
+    },
+      function(InkBlob){
+        console.log(JSON.stringify(InkBlob));
+        console.log(InkBlob.url)
+        Session.set('InkBlob', InkBlob)
+      },
+      function(FPError){
+        console.log(FPError.toString());
+      }
+    );
   }
 });
 
