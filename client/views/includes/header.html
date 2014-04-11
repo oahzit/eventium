@@ -1,44 +1,46 @@
 <template name="header">
-{{#if currentUser}}
+{{#if regNavbar}}
   <nav class="navbar navbar-default navbar-static" role="navigation">
-    <div class="navbar-container">
+    <div class="navbar-container clearfix">
       <!-- Collapsing disabled for now -->
       <div class="navbar-header pull-left">
         <a class="navbar-brand" href="{{pathFor 'occasionsList'}}">eventium</a>
         <ul class="nav navbar-nav">
           <li><a href="{{pathFor 'occasionsList'}}">Home</a></li>
           <li><a href="#">How it Works</a></li>
-          <li><a href="#">Samples</a></li>
+          <li><a href="{{pathFor 'samples'}}">Samples</a></li>
           <li><a href="#">FAQs</a></li>
         </ul>
       </div>
       <div class="navbar-header pull-right">
         <ul class="nav navbar-nav">
+          {{#if currentUser}}
             <li class="dropdown">
               {{> notifications}}
             </li>
-          <li class="nav navbar-nav">{{loginButtons}}</li>
+          {{/if}}
+          <li class="nav navbar-nav">{{> loginButtons}}</li>
         </ul>
       </div>
-  </div><!-- /.navbar-container -->
-</nav>
+    </div><!-- /.navbar-container -->
+  </nav>
 {{else}}
-<nav class="navbar navbar-default navbar-static main-navbar" role="navigation">
-    <div class="navbar-container">
-      <!-- Collapsing disabled for now -->
-      <div class="navbar-header">
-        <a class="navbar-brand" href="{{pathFor 'occasionsList'}}">eventium</a>
-        <ul class="nav navbar-nav">
-          <li><a href="{{pathFor 'occasionsList'}}">Home</a></li>
-          <li><a href="#">How it Works</a></li>
-          <li><a href="#">Samples</a></li>
-          <li><a href="#">FAQs</a></li>
+  <nav class="navbar navbar-default navbar-static main-navbar" role="navigation">
+      <div class="navbar-container clearfix">
+        <!-- Collapsing disabled for now -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{{pathFor 'occasionsList'}}">eventium</a>
+          <ul class="nav navbar-nav">
+            <li><a href="{{pathFor 'occasionsList'}}">Home</a></li>
+            <li><a href="#">How it Works</a></li>
+            <li><a href="{{pathFor 'samples'}}">Samples</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav navbar-nav">{{> loginButtons}}</li>
         </ul>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav navbar-nav">{{loginButtons}}</li>
-      </ul>
-  </div><!-- /.navbar-container -->
-</nav>
+    </div><!-- /.navbar-container -->
+  </nav>
 {{/if}}
 </template>

@@ -14,7 +14,6 @@ Meteor.methods({
 		if(!occasion)
 			throw new Meteor.Error(422, "Events have to be created as part of an occasion")
 		var d = new Date(eventAttributes.date + ' ' + eventAttributes.time)
-		console.log(d)
 		var event = _.extend(_.pick(eventAttributes, 'title', 'date', 'time', 'description', 'location', 'occasionId',
 				'photoURL', 'photoFile'), {
 			userId: user._id,
@@ -51,7 +50,7 @@ Meteor.methods({
 	
 	sendEmail: function (to, from, subject, text) {
     	check([to, from, subject, text], [String]);
-
+    	console.log('email send called')
 	    // Let other method calls from the same client start running,
 	    // without waiting for the email sending to complete.
 	    this.unblock();

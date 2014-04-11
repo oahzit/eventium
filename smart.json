@@ -1,12 +1,12 @@
 {
   "packages": {
-    "iron-router": {},
     "bootstrap-3": {},
     "spin": {},
-    "iron-router-progress": {},
     "accounts-ui-bootstrap-3": {},
     "reactive-cookie": {},
     "bootstrap-datepicker2": {},
-    "filepicker": {}
+    "filepicker": {},
+    "iron-router": {},
+    "iron-router-progress": {}
   }
 }

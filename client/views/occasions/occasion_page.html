@@ -13,7 +13,7 @@
           <div class="pull-left">
           {{#if eventCount}}
             <ul class="events">
-              {{#each events}}
+              {{#each events2}}
                 {{> event}}
               {{/each}}
             </ul>
@@ -34,8 +34,8 @@
           <div class="pull-right occasion-sidebar">
             {{> singleOccasion}}
           </div>
-        <td>
-        </div>
+        </td>
+      </table>
   </div>
 
     {{#if activeEventId}}
@@ -88,4 +88,5 @@
         {{> eventCreate}}
       </div>
     {{/if}}
+    </div>
 </template>

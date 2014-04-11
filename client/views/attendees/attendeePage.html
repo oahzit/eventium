@@ -33,6 +33,7 @@
 		<hr>
 	{{/each}}
 	<a class="btn btn-default js-cancel" href="#">Close</a>
+	<a class="btn btn-default js-email" href="#">Email Attendees</a>
   </div>
   {{else}}
   	<div class="wrapper attendee-page">
@@ -74,6 +75,13 @@
 		</div>
 		<hr>
 	{{/each}}
+	<a class="btn btn-default js-email" href="#">Email Attendees</a>
+	{{#if emailAttendees}}
+	    <div class="overlay"></div>
+	    <div class="popup event-edit">
+			{{> emailAttendees}}
+		</div>
+	{{/if}}
   </div>
   {{/if}}
 </template>

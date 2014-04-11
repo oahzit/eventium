@@ -25,6 +25,9 @@ Template.attendeePage.helpers({
 	else
 		var event = Events.findOne(eventId);
 	return event.title;
+  },
+  emailAttendees: function() {
+	return Session.get('emailAttendees');
   }
 });
 
@@ -42,5 +45,9 @@ Template.attendeePage.events({
 		var event = Events.findOne(this._id);
 		var occasionId = event.occasionId;
 		Router.go('occasionPage', {_id: occasionId});
+	},
+	'click .js-email': function(e) {
+		console.log('click email')
+		Session.set('emailAttendees', 'email');
 	}
 })

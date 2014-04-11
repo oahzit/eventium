@@ -7,7 +7,9 @@
       <h3><a href="{{pathFor 'occasionPage'}}">{{title}}</a></h3>
         <p> Start Date: {{startDate}}</p>
         <p> End Date: {{endDate}} </p>
-        <a href="#" class="js-editOccasion">Edit/Delete</a>
+        {{#if ownOccasion}}
+          <a href="#" class="js-editOccasion">Edit/Delete</a>
+        {{/if}}
     </div>
   </div>
 </template>

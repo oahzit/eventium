@@ -6,7 +6,6 @@ Notifications.allow({
 
 createEventNotification = function(eventId, newAttendee) {
   var event = Events.findOne(eventId);
-  console.log(event)
   Notifications.insert({
     userId: event.userId,
     eventId: event._id,

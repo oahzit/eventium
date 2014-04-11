@@ -27,6 +27,5 @@ Template.notification.helpers({
 Template.notification.events({
   'click .js-notification': function() {
       Notifications.update(this._id, {$set: {read: true}});
-      console.log('click!')
   }
 });

@@ -31,9 +31,15 @@ body {
     color: #fff;
     width: 100%;
     background: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 .main-navbar {
     border: none;
+}
+.navbar-default {
+    border-left: 0px;
+    border-right: 0px;
 }
 .navbar-inner {
     border-radius: 3px 3px 0px 0px;
@@ -62,6 +68,7 @@ body {
 }
 .footer {
     border-top: 2px solid #c3e4e9;
+    border-bottom: 0px;
 }
 .main-footer{
     border: none;
@@ -297,13 +304,14 @@ body {
     float: left;
 }
 .event .date{
-    width: 10%;
-    min-width: 65px;
+    width: 9%;
+    min-width: 60px;
     margin-right: 5px;
 }
 .event .eventDetails {
     font-size: 13px;
-    margin-left: 10px;
+    margin-left: 12px;
+    max-width: 360px;
 }
 .event .event-content { 
     float: left;
@@ -533,15 +541,15 @@ body {
     padding: 0;
 }
 
-.occasionList-title a {
+.occasionsList-title a {
     position: relative;
     top: 15px;
 }
-.occasionList-title h2 {
+.occasionsList-title h2 {
     padding-left: 0
 }
 
-.occasionList-title {
+.occasionsList-title {
     border-bottom: 1px solid #E2E2E2;
     margin-bottom: 20px;
     margin-left: 10px;
@@ -582,11 +590,11 @@ body {
     float: right;
     width: 550px;
     height: 500px;
-    margin-top: 40px;
+    margin-top: 55px;
     margin-right: -10px;
 }
 .sample {
-    height: 500px;
+    height: 455px;
     width: 550px;
     -webkit-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    4px 4px 17px 0px rgba(50, 50, 50, 0.75);
@@ -611,6 +619,10 @@ body {
 }
 .attendee-page h4{
     padding-left: 10px;
+}
+.attendee-page a {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .attendee-list {
     padding-left: 10px;
@@ -647,4 +659,15 @@ body {
 }
 .sans-events a {
     margin-left: 3px;
+}
+.account-page {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.popup300 {
+    width: 300px;
+    top: 15%;
+    left: 40%;
 }

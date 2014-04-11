@@ -9,7 +9,10 @@ Template.occasion.helpers({
 
 		photoPath = '/eventium_default.jpg';
 		return photoPath;
-	}
+	},
+	ownOccasion: function() {
+    return this.userId == Meteor.userId();
+  }
 })
 Template.occasion.events({
 	'click .js-editOccasion': function() {

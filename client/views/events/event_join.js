@@ -33,9 +33,9 @@ Template.eventJoin.events({
 				var attendeeEmail = newAttendee['email'];
 				Meteor.call('sendEmail',
 				            attendeeEmail,
-				            'tiz@example.net',
-				            'Hello from Meteor!',
-				            'This is a test of Email.send.');
+				            'tizhao@gmail.com',
+				            'Helloooooo!',
+				            'You should be receiving an email with a unique link to unregister from an event. \n But this is what you are getting instead. Because email is not ready yet. Sorry!');
 			}
 		});
 	},

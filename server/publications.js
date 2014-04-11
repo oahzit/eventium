@@ -2,6 +2,10 @@ Meteor.publish('occasions', function(userId) {
   return Occasions.find({userId: this.userId});
 });
 
+Meteor.publish('sampleOccasions', function() {
+	return Occasions.find({isSample: true});
+});
+
 Meteor.publish('singleOccasion', function(id) {
   return id && Occasions.find(id);
 });
