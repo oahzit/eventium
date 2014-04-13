@@ -31,9 +31,21 @@ Meteor.publish('attendees', function(eventId) {
 });
 
 Meteor.publish('attendeesByOccasion', function(occasionId) {
-	return Attendees.find({occasionId: occasionId});
+	var occasion = Occasions.findOne(occasionId)
+	if (this.userId == occasion.userId) {
+		return Attendees.find({occasionId: occasionId});
+	}
+	else {
+		return Attendees.find({occasionId: occasionId},
+		{fields: {attendeeName: 1, eventId: 1} })
+	}
 });
 
 Meteor.publish('singleAttendee', function(id) {
 	return Attendees.find(id);
 });
+
+Meteor.publish('attendeeNamesByOccasion', function(occasionId) {
+	return Attendees.find({occasionId: occasionId},
+		{fields: {attendeeName: 1, eventId: 1} })
+})
