@@ -39,7 +39,7 @@ Template.eventJoin.events({
 			}
 		});
 	},
-	'click a': function() {
+	'click .js-cancel': function() {
   		Session.set('activeEventId', '')
   	}
 });
