@@ -11,7 +11,6 @@ Template.header.helpers({
   },
   regNavbar: function() {
     if (Router.current()){
-      console.log('route', Router.current().route.name)
       if (Router.current().route.name == "occasionsList" && this.userId == Meteor.userId()){
         return false
       }

@@ -21,7 +21,6 @@ Meteor.methods({
 		});
 
 		var eventId = Events.insert(event);
-		console.log('eventid', eventId)
 
 		return eventId;
 	},
@@ -35,6 +34,7 @@ Meteor.methods({
 
 		// add attendee to attendees collection
 		var attendee = createEventAttendee(currentEventId, attendeeAttributes);
+		console.log('attendee', attendee)
 
 		// create a new notification
 		createEventNotification(currentEventId, attendeeAttributes);

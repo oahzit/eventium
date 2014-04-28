@@ -1,8 +1,8 @@
 Template.eventJoin.helpers({
 	eventTitle: function() {
 		var eventId = Session.get('activeEventId');
-		var event = Events.findOne(eventId);
-		return event.title;
+		var eventInfo = Events.findOne(eventId);
+		return eventInfo.title;
 	}
 });
 
@@ -16,7 +16,7 @@ Template.eventJoin.events({
 						  }
 		var eventId = Session.get('activeEventId')
 
-		Meteor.call('joinEvent', newAttendee, eventId, function(error, id) {
+		Meteor.call('joinEvent', newAttendee, eventId, function(error, attendeeId) {
 			if (error)
 				throwError(error.reason);
 			else {
@@ -26,16 +26,26 @@ Template.eventJoin.events({
 				if (joinedEvents == null)
 					joinedEvents = {};
 
-				joinedEvents[eventId] = id;
+				joinedEvents[eventId] = attendeeId;
 
 				ReactiveCookie.set('joinedEvents', JSON.stringify(joinedEvents));
 				
 				var attendeeEmail = newAttendee['email'];
+				var eventInfo = Events.findOne(eventId);
+				var eventName = eventInfo.title;
+				var eventDate = eventInfo.date;
+				var eventTime = eventInfo.time;
+
 				Meteor.call('sendEmail',
 				            attendeeEmail,
-				            'tizhao@gmail.com',
-				            'Helloooooo!',
-				            'You should be receiving an email with a unique link to unregister from an event. \n But this is what you are getting instead. Because email is not ready yet. Sorry!');
+				            'epicuriouslyti@gmail.com',
+				            "You're attending " + eventName,
+				            "Hello " + newAttendee.name + "!\n\n"
+				            + "Mark your calendar! You're signed up to go to " + eventName
+				            + " on " + eventDate + " at " + eventTime + ".\n"
+				            + "If you can no longer make it, please [change your RSVP]("
+			            	+ Meteor.absoluteUrl('unattend/'+attendeeId) + ").\n"
+							+ "Have fun!");
 			}
 		});
 	},

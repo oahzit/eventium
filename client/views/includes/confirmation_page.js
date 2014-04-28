@@ -17,3 +17,11 @@ Template.confirmationPage.events({
   	Session.set('confirm', '')
   }
 });
+
+Template.confirmUnattend.events({
+  'click .js-back': function() {
+    var occasionId = Session.get('occasionId')
+    Session.set('unjoin', '')
+    Router.go('occasionPage', {_id: occasionId})
+  }
+});

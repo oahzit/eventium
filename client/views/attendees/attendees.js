@@ -3,7 +3,6 @@ Template.attendees.helpers({
     return Attendees.find({eventId: this._id});
   },
   attendeeCount: function(){
-  	console.log('attendees', Attendees.find({eventId: this._id}).count())
     return Attendees.find({eventId: this._id}).count();
   }
 });

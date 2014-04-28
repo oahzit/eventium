@@ -1,7 +1,5 @@
 Template.occasionPage.helpers({
   events2: function() {
-    console.log('looking for events')
-    console.log(Events.findOne())
     return Events.find({occasionId: this._id}, {sort: {unixDate: 1}});
   },
   activeEventId: function () {
@@ -38,7 +36,6 @@ Template.occasionPage.helpers({
 
 Template.occasionPage.events({
 	'click .js-create': function() {
-    console.log('creating event')
     Session.set('create', 'create')
     Session.set('occasionId', this._id)
   }

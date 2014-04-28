@@ -1,5 +1,12 @@
 <template name="unattendEvent">
-        <p> Are you sure you can't make it anymore?</p>
-        <a href="#" class="btn btn-primary js-unattend">I can't make it</a>
-        <a href="#" class="btn btn-default js-cancel">I could still make it</a>
+	<div class="wrapper">
+		{{#if hasLeft}}
+			{{> confirmUnattend}}
+		{{else}}
+			<h4> Unattend {{eventName}}</h4>
+		    <p> Are you sure you can't make it anymore?</p>
+		    <a href="#" class="btn btn-primary js-unattend">I can't make it</a>
+		    <a href="#" class="btn btn-default js-cancel">I can still make it</a>
+		{{/if}}
+	</div>
 </template>

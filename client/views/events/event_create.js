@@ -69,7 +69,6 @@ Template.eventCreate.events({
 });
 
 Template.eventCreate.rendered = function(template) {
-
   //console.log('occasionid', this._id)
   var occasionId = Session.get('occasionId');
   var occasionDate = Occasions.findOne(occasionId).unixDate
@@ -82,4 +81,5 @@ Template.eventCreate.rendered = function(template) {
   $('#time').timepicker({
     'scrollDefaultNow': true
   });
+
 }
